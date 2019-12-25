@@ -1,0 +1,55 @@
+{
+  "connection": "default",
+  "collectionName": "works",
+  "info": {
+    "name": "work",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cover_image_url": {
+      "type": "text"
+    },
+    "pages": {
+      "type": "json"
+    },
+    "create_time": {
+      "type": "timestamps"
+    },
+    "update_time": {
+      "type": "timestamps"
+    },
+    "is_publish": {
+      "type": "boolean"
+    },
+    "is_template": {
+      "type": "boolean"
+    },
+	"user_id":{
+			"type": "text"
+  },
+  "review_reason":{
+    "type":"text"
+  },
+  "status":{
+    "type": "text"
+  },
+  "preview_url":{
+    "type": "text"
+  },
+  "workforms": {
+    "collection": "workform",
+    "via": "work"
+  }
+  }
+}
