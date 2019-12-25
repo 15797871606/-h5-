@@ -40,10 +40,9 @@ module.exports = {
             uuidMap2Name[ele.uuid] = ele.pluginProps.aliasName;
           }
           if (ele.name === 'lbp-form-group') {
-            uuidMap2Name[ele.uuid] = ele.pluginProps.userName;
-            // uuidMap2Name[ele.uuid] = ele.pluginProps.phoneNum;
-            console.log('uuid____',ele.uuid)
-            console.log('____group_____',ele)
+            uuidMap2Name[ele.uuid-1] = ele.pluginProps.userName;
+            uuidMap2Name[ele.uuid +1] = ele.pluginProps.phoneNum;
+            // uuidMap2Name[ele.uuid] = ele.pluginProps.phoneNum
           }
         });
       });
