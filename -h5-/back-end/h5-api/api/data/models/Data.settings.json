@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "data",
+  "info": {
+    "name": "data",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "comment": ""
+  },
+  "attributes": {
+    "app": {
+      "type": "json"
+    },
+    "work": {
+      "model": "work",
+      "via": "data"
+    },
+		"ip": {
+		  "type": "text"
+		},
+		"city": {
+		  "type": "text"
+		}
+  }
+}

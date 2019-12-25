@@ -68,6 +68,10 @@ export default {
     },
     // 复制的方法
     copyText(text, callback){ // text: 要复制的内容， callback: 回调
+				if(this.work.status == '0' || this.work.status == '2'){
+					layer.msg("落地页未审核或审核未通过");
+					return
+				}
         var tag = document.createElement('input');
         tag.setAttribute('id', 'cp_hgz_input');
         tag.value = text;

@@ -11,15 +11,25 @@ export const columns = [
     key: 'title'
   },
   {
-    title: '浏览量(PV)',
+    title: '表单提交次数',
     dataIndex: 'pv',
     key: 'pv'
   },
   {
-    title: '用户浏览量(UV)',
+    title: '用户浏览量',
     dataIndex: 'uv',
     key: 'uv'
   },
+// 	{
+// 	  title: '用户IP',
+// 	  dataIndex: 'ip',
+// 	  key: 'ip'
+// 	},
+// 	{
+// 	  title: '所在城市',
+// 	  dataIndex: 'city',
+// 	  key: 'city'
+// 	},
   // {
   //   // i18n for title
   //   title: '',

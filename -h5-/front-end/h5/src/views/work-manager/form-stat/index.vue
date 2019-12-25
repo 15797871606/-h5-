@@ -25,8 +25,10 @@ export default {
       return this.works.map(w => ({
         id: w.id,
         title: w.title,
-        pv: w.pv || 0,
-        uv: w.uv || 0,
+        pv: w.pv || w.workforms.length,
+        uv: w.uv || w.data.length,
+				ip: w.data.ip || '无',
+				city: w.data.city || '无',
         formCount: w.formCount || 0
       }))
     }
