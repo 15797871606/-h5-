@@ -27,8 +27,8 @@ export default {
         title: w.title,
         pv: w.pv || w.workforms.length,
         uv: w.uv || w.data.length,
-				ip: w.data.ip || '无',
-				city: w.data.city || '无',
+// 				ip: w.data.ip || '无',
+// 				city: w.data.city || '无',
         formCount: w.formCount || 0
       }))
     }
