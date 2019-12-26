@@ -1,17 +1,19 @@
 import Page from './page.js'
+import Data from './data.js'
 
 class Work {
   constructor (work = {}) {
     this.title = work.title || '标题'
     this.description = work.description || '描述'
     this.pages = work.pages || [new Page()]
+		// this.datas = work.datas || [new Data()]
 
     // this.id = this.id
     // TODO 用id 并不是一个好办法，有心人会得知整个系统中共有多少作品等额外信息，尽量防止信息泄漏
     // this.key = this.key
     this.cover_image_url = ''
     // TODO 后期可以添加一个类似项目组的概念，每个项目组下可以有多个作品
-    // this.project_id = 1
+    // this.project_id = 1 
     let dat = new Date()
     var formatDate = function (date) {  
       var y = date.getFullYear();  
