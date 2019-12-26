@@ -5,11 +5,11 @@
     "name": "data",
     "description": ""
   },
-  "options": {
-    "increments": true,
-    "timestamps": false,
-    "comment": ""
-  },
+	 "options": {
+		 "increments": true,
+		 "timestamps": false,
+		 "comment": ""
+	 },
   "attributes": {
     "app": {
       "type": "json"
