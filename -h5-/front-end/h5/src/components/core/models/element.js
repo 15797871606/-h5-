@@ -4,9 +4,10 @@ import { parsePx } from '../../../utils/element.js'
 const disabledPluginsForEditMode = ['lbp-form-input', 'lbp-form-button', 'lbp-video']
 const cloneObj = (value) => JSON.parse(JSON.stringify(value))
 // const scrW = document.getElementsByClassName('edit-mode')[0].clientWidth
+// let pt = Number(sessionStorage.getItem('pos'))
 
 const defaultStyle = {
-  top: 200,
+  top: 0 ,
   bottom: 100,
   left: 0,
   width: 400,
@@ -22,6 +23,8 @@ class Element {
   constructor(ele) {
     this.name = ele.name
     this.uuid = ele.uuid || +new Date()
+    let pt = Number(sessionStorage.getItem('pos'))
+  
 
     /**
      * #!zh:
@@ -44,10 +47,12 @@ class Element {
       this.commonStyle.height = 130
     }
     if (this.name == 'lbp-linkWay') {
-      this.commonStyle.width = 0;
-      this.commonStyle.height = 0;
-
+      this.commonStyle.width = 0
+      this.commonStyle.height = 0
     }
+    
+    this.commonStyle.top =pt ? pt:0
+    console.log('顶部定位',pt)
     this.events = []
     this.animations = ele.animations || []
   }
