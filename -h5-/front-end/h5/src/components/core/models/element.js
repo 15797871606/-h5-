@@ -65,7 +65,7 @@ class Element {
     Object.keys(propsConfig).forEach(key => {
       // #6
       if (key === 'name') {
-        console.warn('Please do not use {name} as plugin prop')
+        // console.warn('Please do not use {name} as plugin prop')
         return
       }
       const defaultValue = propsConfig[key].default

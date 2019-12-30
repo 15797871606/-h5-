@@ -94,7 +94,7 @@ export default {
   },
   backgroundColor: {
     type: String,
-    default: '#ffffff',
+    default: '#1890FF',
     editor: {
       type: 'a-input', // lbs-color-picker
       label: '背景颜色',

@@ -26,7 +26,7 @@ export default {
     /**
      * 通过方位计算样式，主要是 top、left、鼠标样式
      */
-    getPointStyle (point, isWrapElement = true) {
+    getPointStyle(point, isWrapElement = true) {
 
       const pos = this.position
       const top = pos.top // !#zh 减4是为了让元素能够处于 border 的中间
@@ -47,10 +47,10 @@ export default {
         $('.edit-mode').height(566 + 'px')
         $('.canvas-wrapper').height(566 + 'px')
       }
-      console.log('top', top)
-      console.log('height', height)
-      let t = top +height
-      console.log('___',t)
+      // console.log('top', top)
+      // console.log('height', height)
+      let t = top + height
+      // console.log('___',t)
       sessionStorage.setItem('pos', t)
 
       if (point.length === 2) {
@@ -80,7 +80,7 @@ export default {
     /**
      * !#zh 主要目的是：阻止冒泡
      */
-    handleWrapperClick (e) {
+    handleWrapperClick(e) {
       // e.stopPropagation()
       // e.preventDefault()
     },
