@@ -21,9 +21,12 @@ const defaultStyle = {
 
 class Element {
   constructor(ele) {
+		console.log("输出：",ele);
     this.name = ele.name
     this.uuid = ele.uuid || +new Date()
     let pt = Number(sessionStorage.getItem('pos'))
+		// let pt = ele.commonStyle.top
+		console.log("输出pt：",pt);
   
 
     /**
@@ -50,8 +53,10 @@ class Element {
       this.commonStyle.width = 0
       this.commonStyle.height = 0
     }
-    
-    this.commonStyle.top =pt ? pt:0
+    if(pt = 0){
+			this.commonStyle.top = ele.commonStyle.top
+		}
+    // this.commonStyle.top =pt ? pt:0
     console.log('顶部定位',pt)
     this.events = []
     this.animations = ele.animations || []
